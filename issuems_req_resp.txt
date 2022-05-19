@@ -1,0 +1,54 @@
+1. GET http://localhost:8082/issueAmazingBooks/fetchBook/B2
+
+		Status : 200 OK
+
+		{
+			"isbn": "B2",
+			"title": "Revolution 2020",
+			"publishedDate": "05/05/2000",
+			"totalCopies": 60,
+			"issuedCopies": 10,
+			"author": "Chetan Bhagat"
+		}
+
+2. POST http://localhost:8082/issueAmazingBooks/issueBook
+
+		ReqBody :
+
+			{
+				"custId": "C1",
+				"isbn": "B2",
+				"noOfCopies" : 2
+			}
+			
+		----------------------------------------
+			
+		Response : 
+		Status : 200 OK
+
+		Book issued successfully
+
+		ReqBody :
+
+			{
+				"custId": "C1",
+				"isbn": "B2",
+				"noOfCopies" : 100
+			}
+			
+		Response : 
+		Status : 200 OK
+
+		Requested number of copy is not available for this book
+		
+3. GET http://localhost:8082/issueAmazingBooks/fetchIssueDetailsAll
+
+		Response : 
+				Status : 200 OK
+		[
+			{
+				"custId": "C1",
+				"isbn": "B2",
+				"noOfCopies": 2
+			}
+		]

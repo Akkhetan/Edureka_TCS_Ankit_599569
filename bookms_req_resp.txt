@@ -1,0 +1,65 @@
+1. POST : http://localhost:8081/amazingBooks/addBook
+
+		Status : 200 OK
+
+		{
+			"isbn": "B2",
+			"title": "Revolution 2020",
+			"publishedDate": "05/05/2000",
+			"totalCopies": 60,
+			"issuedCopies": 5,
+			"author": "Chetan Bhagat"
+		}
+
+2. GET : http://localhost:8081/amazingBooks/fetchAllBook
+		Status : 200 OK
+
+		[
+			{
+				"isbn": "B2",
+				"title": "Revolution 2020",
+				"publishedDate": "05/05/2000",
+				"totalCopies": 60,
+				"issuedCopies": 5,
+				"author": "Chetan Bhagat"
+			},
+			{
+				"isbn": "B1",
+				"title": "You can win",
+				"publishedDate": "10/05/2000",
+				"totalCopies": 4000,
+				"issuedCopies": 2,
+				"author": "Shiv Khera"
+			}
+		]
+
+3. GET http://localhost:8081/amazingBooks/fetchBook/B1
+
+		Status : 200 OK
+
+		{
+			"isbn": "B1",
+			"title": "You can win",
+			"publishedDate": "10/05/2000",
+			"totalCopies": 4000,
+			"issuedCopies": 2,
+			"author": "Shiv Khera"
+		}
+
+4. PUT http://localhost:8081/amazingBooks/editBook/B2
+
+		Status : 200 OK
+		{
+			"isbn": "B2",
+			"title": "Revolution 2020",
+			"publishedDate": "05/05/2000",
+			"totalCopies": 60,
+			"issuedCopies": 10,
+			"author": "Chetan Bhagat"
+		}
+
+5. DELETE http://localhost:8081/amazingBooks/deleteBook/B1
+
+		Status : 200 OK
+
+		Suceesfully deleted
